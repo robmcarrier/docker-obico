@@ -2,7 +2,7 @@ services:
   collectstatic:
     image: ghcr.io/gabe565/obico/web
     env_file:
-      - .env
+      - stack.env
     command: [python, manage.py, collectstatic, --verbosity=2, --noinput, --link]
     volumes:
       - ./data/data:/data
